@@ -1,5 +1,5 @@
 ---
-title: [学习笔记]深入理解CSS定位机制之浮动与绝对定位
+title: '[学习笔记]深入理解CSS定位机制之浮动与绝对定位'
 date: 2016-09-28 17:30:57
 tags:
 - 学习笔记
@@ -14,7 +14,7 @@ comments: true
 浮动的**设计初衷只是让文字环绕图片**而已，但是没有一件东西的使用规则是完全按照设计师来的，决定权在使用者，使用者们总是会探寻一切其它的可能。所以，我们目前利用浮动来布局本不是浮动该干的事，那么出现的种种问题也就理所当然了。
 ## 浮动特性
 ### 浮动的“包裹性”
-浮动属性在某种意义上来说与`display: inline-block`属性的作用是一样的，只是浮动具有方向性而已。所以也可以这样说：浮动就是个带有方位的`display:inline-block`属性.
+浮动属性在某种意义上来说与`display: inline-block`属性的作用是一样的，只是浮动具有方向性而已。所以也可以这样说：浮动就是个带有方位的`display: inline-block`属性.
 ### 浮动的“破坏性”
 浮动脱离了文档流，使父元素高度坍塌,也造成了浮动元素间紧密排列的特性。
 ### 浮动的定位原则
@@ -374,7 +374,7 @@ aside {
     width: 260px;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 60px;
     bottom: 0;
     background: #FD996E;
 }
@@ -404,11 +404,16 @@ aside {
 页面：
 ![layout](http://charles-hang.github.io/images/16_9_28/12.jpg)
 布局思路：
+***
 1. body降级 子元素升级。page拉伸，需要设置html body高度百分百。
 2. 各模块-头尾、侧边框用绝对定位各居其位。
 3. 内容区域想象成body，里面小伙伴愉快玩耍。
 4. 为实现一些加载提示效果，布局全屏覆盖与page平级。这样两者相互不影响。
+***
 这样的布局头尾侧边框等实现了与fixed一样的效果，还避免了移动端`position:fixed`实现的诸多问题，值得一试。
-## display、position和float的相互关系
-可以把这看做是一个类似**优先级的机制**，`position:absolute` 和 `position:fixed` 优先级最高，有它存在的时候，浮动不起作用，`display`的值会重置（规则见下表）； 其次，元素的`float`特性的值不是`none` 的时候或者它是根元素的时候，`display`的值会重置； 最后，非根元素，并且非浮动元素，并且非绝对定位的元素，`display` 特性值同设置值。这些规则简单但平时却容易忽视。
+# display、position和float的相互关系
+可以把这看做是一个类似**优先级的机制**，`position:absolute` 和 `position:fixed`优先级最高，有它存在的时候，浮动不起作用，`display`的值会重置（规则见下表）； 其次，元素的`float`特性的值不是`none` 的时候或者它是根元素的时候，`display`的值会重置； 最后，非根元素，并且非浮动元素，并且非绝对定位的元素，`display` 特性值同设置值。这些规则简单但平时却容易忽视。
+转换对应表：
 ![display trans](http://charles-hang.github.io/images/16_9_28/13.jpg)
+
+深入理解CSS定位机制篇完结！
