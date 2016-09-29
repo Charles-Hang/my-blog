@@ -198,7 +198,7 @@ i {
 ```
 页面：
 ![s icon4](http://charles-hang.github.io/images/16_9_28/7.jpg)
-免费图标仅用了`position:absolute;`vip图标仅用了`position:absolute;margin-left:-21px`。无依赖的绝对定位对DOM流中的位置有要求，免费图标absolute前大图前面，绝对定位后由于跟随性自然就到位了。vip图标呢，绝对定位之后，宽高相当于零了，还有大家注意到`<!-- -->`了吗，这是消除vip图标与前面元素间隙的方法，这样绝对定位后，宽高相当于零的vip图标由于跟随性就自然跟在大图后，向下面这样，然后margin负拉回来即可。
+免费图标仅用了`position:absolute;`vip图标仅用了`position:absolute;margin-left:-21px`。无依赖的绝对定位对DOM流中的位置有要求，免费图标absolute前在大图前面，绝对定位后由于跟随性自然就到位了。vip图标呢，绝对定位之后，宽高相当于零了，还有大家注意到`<!-- -->`了吗，这是消除vip图标与前面元素间隙的方法，这样绝对定位后，宽高相当于零的vip图标由于跟随性就自然跟在大图后，像下面这样，然后margin负拉回来即可。
 ![s icon5](http://charles-hang.github.io/images/16_9_28/8.jpg)
 这样定位的优点显而易见，如果按常规实现，就要在父容器加relative，如果日后维护修改需要去掉父级的relative，那整个定位就崩了。无依赖的绝对定位与父级没有关系，这样更健壮，更易于日后维护修改。
 需要注意的是，无依赖的绝对定位对跟随性的理解要求较高，需在工作中积累经验达到能熟练的使用。
