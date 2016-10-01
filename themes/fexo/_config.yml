@@ -194,6 +194,10 @@ project:
     name: jike-school
     url: https://github.com/Charles-Hang/jike-school
     intro: 仿极客学院首页（旧版）
+  - type: personal
+    name: baidu-homepage
+    url: https://github.com/Charles-Hang/baidu-homepage
+    intro: 仿百度首页（登陆后）
   # - type: company
   #   name: Fexo
   #   url: https://github.com/forsigner/fexo
