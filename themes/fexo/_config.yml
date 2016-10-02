@@ -198,6 +198,10 @@ project:
     name: baidu-homepage
     url: https://github.com/Charles-Hang/baidu-homepage
     intro: 仿百度首页（登陆后）
+  - type: personal
+    name: phone-baiduNews
+    url: https://github.com/Charles-Hang/phone-baiduNews
+    intro: 带后台管理的简易手机百度新闻系统（PHP版和nodejs版）
   # - type: company
   #   name: Fexo
   #   url: https://github.com/forsigner/fexo
